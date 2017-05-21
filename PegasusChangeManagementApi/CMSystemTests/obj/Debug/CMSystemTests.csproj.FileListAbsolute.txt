@@ -1,0 +1,13 @@
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\CMSystemTests\bin\Debug\CMSystemTests.dll
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\CMSystemTests\bin\Debug\CMSystemTests.pdb
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\CMSystemTests\bin\Debug\ChangeManagementSystem.dll
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\CMSystemTests\bin\Debug\nunit.framework.dll
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\CMSystemTests\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\CMSystemTests\bin\Debug\NUnit.System.Linq.dll
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\CMSystemTests\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\CMSystemTests\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\CMSystemTests\bin\Debug\ChangeManagementSystem.pdb
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\CMSystemTests\bin\Debug\nunit.framework.xml
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\CMSystemTests\obj\Debug\CMSystemTests.csprojResolveAssemblyReference.cache
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\CMSystemTests\obj\Debug\CMSystemTests.dll
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\CMSystemTests\obj\Debug\CMSystemTests.pdb

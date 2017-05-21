@@ -1,0 +1,16 @@
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\MSystemTests\bin\Debug\MSystemTests.dll
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\MSystemTests\bin\Debug\MSystemTests.pdb
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\MSystemTests\bin\Debug\ChangeManagementSystem.dll
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\MSystemTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\MSystemTests\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\MSystemTests\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\MSystemTests\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\MSystemTests\bin\Debug\ChangeManagementSystem.pdb
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\MSystemTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\MSystemTests\obj\Debug\MSystemTests.csprojResolveAssemblyReference.cache
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\MSystemTests\obj\Debug\MSystemTests.dll
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\MSystemTests\obj\Debug\MSystemTests.pdb
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\MSystemTests\bin\Debug\MSystemTests.dll.config
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\MSystemTests\bin\Debug\SharedCommons.dll
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\MSystemTests\bin\Debug\Encryption.dll
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\MSystemTests\bin\Debug\SharedCommons.pdb

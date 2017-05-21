@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PegasusChangeManagementApi", "..\..\WebSites\PegasusChangeManagementApi\", "{BD3B05B5-6237-49FC-9AC9-73329E1E9572}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		ProjectReferences = "{d4bd3d49-bfdc-464e-9ac7-9bb241a3602a}|ChangeManagementSystem.dll;{B0913B97-3879-4192-8C6C-EA215914254F}|SharedCommons.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_24631"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\WebSites\PegasusChangeManagementApi\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_24631\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_24631"
+		Release.AspNetCompiler.PhysicalPath = "..\..\WebSites\PegasusChangeManagementApi\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_24631\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "24631"
+		SlnRelativePath = "..\..\WebSites\PegasusChangeManagementApi\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem", "ChangeManagementSystem\ManagementSystem.csproj", "{D4BD3D49-BFDC-464E-9AC7-9BB241A3602A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMSystemTests", "CMSystemTests\CMSystemTests.csproj", "{067456C0-086C-46A8-B37F-1405717B7BFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedCommons", "SharedCommons\SharedCommons.csproj", "{B0913B97-3879-4192-8C6C-EA215914254F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickTester", "QuickTester\QuickTester.csproj", "{47B7AA1A-1821-4A0D-B028-99CCF76E0EF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSystemTests", "MSystemTests\MSystemTests.csproj", "{5EB725C7-2DD2-4A58-AF89-E31783D297A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD3B05B5-6237-49FC-9AC9-73329E1E9572}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD3B05B5-6237-49FC-9AC9-73329E1E9572}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD3B05B5-6237-49FC-9AC9-73329E1E9572}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD3B05B5-6237-49FC-9AC9-73329E1E9572}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{D4BD3D49-BFDC-464E-9AC7-9BB241A3602A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4BD3D49-BFDC-464E-9AC7-9BB241A3602A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4BD3D49-BFDC-464E-9AC7-9BB241A3602A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4BD3D49-BFDC-464E-9AC7-9BB241A3602A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{067456C0-086C-46A8-B37F-1405717B7BFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{067456C0-086C-46A8-B37F-1405717B7BFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{067456C0-086C-46A8-B37F-1405717B7BFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{067456C0-086C-46A8-B37F-1405717B7BFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0913B97-3879-4192-8C6C-EA215914254F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0913B97-3879-4192-8C6C-EA215914254F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0913B97-3879-4192-8C6C-EA215914254F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0913B97-3879-4192-8C6C-EA215914254F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47B7AA1A-1821-4A0D-B028-99CCF76E0EF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47B7AA1A-1821-4A0D-B028-99CCF76E0EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47B7AA1A-1821-4A0D-B028-99CCF76E0EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47B7AA1A-1821-4A0D-B028-99CCF76E0EF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EB725C7-2DD2-4A58-AF89-E31783D297A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EB725C7-2DD2-4A58-AF89-E31783D297A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EB725C7-2DD2-4A58-AF89-E31783D297A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EB725C7-2DD2-4A58-AF89-E31783D297A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

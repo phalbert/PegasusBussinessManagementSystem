@@ -1,0 +1,12 @@
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\SharedCommons\bin\Debug\SharedCommons.dll
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\SharedCommons\bin\Debug\SharedCommons.pdb
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\SharedCommons\obj\Debug\SharedCommons.csprojResolveAssemblyReference.cache
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\SharedCommons\obj\Debug\SharedCommons.dll
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\SharedCommons\obj\Debug\SharedCommons.pdb
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\SharedCommons\bin\Debug\Encryption.dll
+D:\Work\PegasusManagementSystem\application\SharedCommons\bin\Debug\SharedCommons.dll
+D:\Work\PegasusManagementSystem\application\SharedCommons\bin\Debug\SharedCommons.pdb
+D:\Work\PegasusManagementSystem\application\SharedCommons\bin\Debug\Encryption.dll
+D:\Work\PegasusManagementSystem\application\SharedCommons\obj\Debug\SharedCommons.csprojResolveAssemblyReference.cache
+D:\Work\PegasusManagementSystem\application\SharedCommons\obj\Debug\SharedCommons.dll
+D:\Work\PegasusManagementSystem\application\SharedCommons\obj\Debug\SharedCommons.pdb

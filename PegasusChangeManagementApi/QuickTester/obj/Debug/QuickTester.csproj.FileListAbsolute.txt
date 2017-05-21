@@ -1,0 +1,14 @@
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\QuickTester\bin\Debug\QuickTester.exe.config
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\QuickTester\obj\Debug\QuickTester.csprojResolveAssemblyReference.cache
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\QuickTester\bin\Debug\QuickTester.exe
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\QuickTester\bin\Debug\QuickTester.pdb
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\QuickTester\bin\Debug\ChangeManagementSystem.dll
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\QuickTester\bin\Debug\SharedCommons.dll
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\QuickTester\bin\Debug\ChangeManagementSystem.pdb
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\QuickTester\bin\Debug\SharedCommons.pdb
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\QuickTester\obj\Debug\QuickTester.exe
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\QuickTester\obj\Debug\QuickTester.pdb
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\QuickTester\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\QuickTester\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\QuickTester\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\QuickTester\bin\Debug\Encryption.dll
