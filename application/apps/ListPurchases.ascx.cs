@@ -128,7 +128,11 @@ public partial class ListPurchases : System.Web.UI.UserControl, ExternalMessageI
         return searchCriteria.ToArray();
     }
 
-    
+    public void SetSearchParametersForUnpaidPurchases()
+    {
+        ddIsPaid.SelectedValue = "FALSE";
+        ddIsPaid.Enabled = false;
+    }
 
     public void ShowExternalMessage()
     {

@@ -33,6 +33,7 @@ public partial class CompleteSale : System.Web.UI.Page
     private void LoadData()
     {
         HighLightCorrectTab();
+        ListInvoicesUserControl.SetSearchParametersForUnpaidInvoices();
     }
 
     private void HighLightCorrectTab()

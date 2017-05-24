@@ -131,4 +131,10 @@ public partial class ListSales : System.Web.UI.UserControl
     {
         bll.ShowExternalMessage(lblmsg, Session);
     }
+
+    public void SetSearchParametersForUnpaidSales()
+    {
+        ddIsPaid.SelectedValue = "FALSE";
+        ddIsPaid.Enabled = false;
+    }
 }

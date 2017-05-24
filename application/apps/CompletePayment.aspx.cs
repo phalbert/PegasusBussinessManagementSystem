@@ -33,6 +33,7 @@ public partial class CompletePayment : System.Web.UI.Page
     private void LoadData()
     {
         HighLightCorrectTab();
+        ListPaymentVoucherUserControl.SetSearchParametersForUnpaidVouchers();
     }
 
     private void HighLightCorrectTab()

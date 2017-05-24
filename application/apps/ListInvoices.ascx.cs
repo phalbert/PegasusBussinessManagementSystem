@@ -120,4 +120,11 @@ public partial class ListInvoices : System.Web.UI.UserControl
         searchCriteria.Add(isPaid);
         return searchCriteria.ToArray();
     }
+
+    public void SetSearchParametersForUnpaidInvoices()
+    {
+        ddIsUsed.SelectedValue = "FALSE";
+        ddIsUsed.Enabled = false;
+    }
+
 }

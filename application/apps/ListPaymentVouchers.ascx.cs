@@ -121,4 +121,10 @@ public partial class ListPaymentVouchers : System.Web.UI.UserControl
         searchCriteria.Add(isPaid);
         return searchCriteria.ToArray();
     }
+
+    public void SetSearchParametersForUnpaidVouchers()
+    {
+        ddIsUsed.SelectedValue = "FALSE";
+        ddIsUsed.Enabled = false;
+    }
 }

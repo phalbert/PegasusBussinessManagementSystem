@@ -104,10 +104,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://localhost:8020/PegasusChangeManagementApi/MSystemService.asmx%3fWSDL">
+    <WebReferenceUrl Include="http://localhost:24631/MSystemService.asmx%3fWSDL">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\PegasusManagementApi\</RelPath>
-      <UpdateFromURL>http://localhost:8020/PegasusChangeManagementApi/MSystemService.asmx%3fWSDL</UpdateFromURL>
+      <UpdateFromURL>http://localhost:24631/MSystemService.asmx%3fWSDL</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
