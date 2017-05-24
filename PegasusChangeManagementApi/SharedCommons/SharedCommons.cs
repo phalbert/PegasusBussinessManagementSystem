@@ -55,6 +55,21 @@ namespace SharedCommons
             }
         }
 
+        //for more info checkout: https://www.jokecamp.com/blog/examples-of-creating-base64-hashes-using-hmac-sha256-in-different-languages/#csharp
+        public static string GenearetHMACSha256Hash(string secretPresharedKey, string message)
+        {
+            ASCIIEncoding encoding = new System.Text.ASCIIEncoding();
+            byte[] keyByte = encoding.GetBytes(secretPresharedKey);
+            byte[] messageBytes = encoding.GetBytes(message);
+            using (var hmacsha256 = new HMACSHA256(keyByte))
+            {
+                byte[] hashmessage = hmacsha256.ComputeHash(messageBytes);
+                string base64string = Convert.ToBase64String(hashmessage);
+                string HmacHash = ByteArrayToString(hashmessage);
+                return HmacHash;
+            }
+        }
+
         public static string GetDigitalSignature(string dataToSign, string PathToPrivateKey)
         {
             // path to your private key

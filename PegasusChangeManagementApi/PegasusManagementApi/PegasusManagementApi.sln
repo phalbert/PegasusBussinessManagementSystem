@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem", "..\ChangeManagementSystem\ManagementSystem.csproj", "{D4BD3D49-BFDC-464E-9AC7-9BB241A3602A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickTester", "..\QuickTester\QuickTester.csproj", "{47B7AA1A-1821-4A0D-B028-99CCF76E0EF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedCommons", "..\SharedCommons\SharedCommons.csproj", "{B0913B97-3879-4192-8C6C-EA215914254F}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PegasusChangeManagementApi", "..\PegasusChangeManagementApi\", "{E4149E6D-8D22-42DD-BB28-D97313E0A16F}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{D4BD3D49-BFDC-464E-9AC7-9BB241A3602A}|ChangeManagementSystem.dll;{B0913B97-3879-4192-8C6C-EA215914254F}|SharedCommons.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/PegasusChangeManagementApi"
+		Debug.AspNetCompiler.PhysicalPath = "..\PegasusChangeManagementApi\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\PegasusChangeManagementApi\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/PegasusChangeManagementApi"
+		Release.AspNetCompiler.PhysicalPath = "..\PegasusChangeManagementApi\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\PegasusChangeManagementApi\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "60423"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4BD3D49-BFDC-464E-9AC7-9BB241A3602A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4BD3D49-BFDC-464E-9AC7-9BB241A3602A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4BD3D49-BFDC-464E-9AC7-9BB241A3602A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4BD3D49-BFDC-464E-9AC7-9BB241A3602A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47B7AA1A-1821-4A0D-B028-99CCF76E0EF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47B7AA1A-1821-4A0D-B028-99CCF76E0EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47B7AA1A-1821-4A0D-B028-99CCF76E0EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47B7AA1A-1821-4A0D-B028-99CCF76E0EF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0913B97-3879-4192-8C6C-EA215914254F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0913B97-3879-4192-8C6C-EA215914254F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0913B97-3879-4192-8C6C-EA215914254F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0913B97-3879-4192-8C6C-EA215914254F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4149E6D-8D22-42DD-BB28-D97313E0A16F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4149E6D-8D22-42DD-BB28-D97313E0A16F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4149E6D-8D22-42DD-BB28-D97313E0A16F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4149E6D-8D22-42DD-BB28-D97313E0A16F}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

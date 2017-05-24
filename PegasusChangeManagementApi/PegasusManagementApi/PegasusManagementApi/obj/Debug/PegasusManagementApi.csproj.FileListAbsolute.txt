@@ -1,0 +1,4 @@
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\PegasusManagementApi\PegasusManagementApi\bin\PegasusManagementApi.dll
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\PegasusManagementApi\PegasusManagementApi\bin\PegasusManagementApi.pdb
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\PegasusManagementApi\PegasusManagementApi\obj\Debug\PegasusManagementApi.dll
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\PegasusManagementApi\PegasusManagementApi\obj\Debug\PegasusManagementApi.pdb

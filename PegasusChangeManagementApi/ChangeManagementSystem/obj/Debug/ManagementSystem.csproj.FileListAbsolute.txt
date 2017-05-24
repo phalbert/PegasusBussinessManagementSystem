@@ -17,3 +17,12 @@ C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagemen
 C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\ChangeManagementSystem\obj\Debug\ChangeManagementSystem.dll
 C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\ChangeManagementSystem\obj\Debug\ChangeManagementSystem.pdb
 C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\ChangeManagementSystem\bin\Debug\Encryption.dll
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\ChangeManagementSystem\obj\Debug\ManagementSystem.csprojResolveAssemblyReference.cache
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\ChangeManagementSystem\obj\Debug\ChangeManagementSystem.pdb
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\ChangeManagementSystem\bin\Debug\ChangeManagementSystem.dll
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\ChangeManagementSystem\bin\Debug\ChangeManagementSystem.pdb
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\ChangeManagementSystem\bin\Debug\ServiceStack.Interfaces.dll
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\ChangeManagementSystem\bin\Debug\SharedCommons.dll
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\ChangeManagementSystem\bin\Debug\Encryption.dll
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\ChangeManagementSystem\bin\Debug\SharedCommons.pdb
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\ChangeManagementSystem\obj\Debug\ChangeManagementSystem.dll

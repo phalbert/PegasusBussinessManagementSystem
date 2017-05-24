@@ -12,3 +12,17 @@ C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagemen
 C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\QuickTester\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
 C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\QuickTester\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
 C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\QuickTester\bin\Debug\Encryption.dll
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\QuickTester\bin\Debug\QuickTester.exe.config
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\QuickTester\bin\Debug\QuickTester.exe
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\QuickTester\bin\Debug\QuickTester.pdb
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\QuickTester\bin\Debug\ChangeManagementSystem.dll
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\QuickTester\bin\Debug\SharedCommons.dll
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\QuickTester\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\QuickTester\bin\Debug\Encryption.dll
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\QuickTester\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\QuickTester\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\QuickTester\bin\Debug\ChangeManagementSystem.pdb
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\QuickTester\bin\Debug\SharedCommons.pdb
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\QuickTester\obj\Debug\QuickTester.csprojResolveAssemblyReference.cache
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\QuickTester\obj\Debug\QuickTester.exe
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\QuickTester\obj\Debug\QuickTester.pdb

@@ -37,3 +37,8 @@ D:\Work\PegasusManagementSystem\application\InterfaceClass\InteLinkClass\InterLi
 D:\Work\PegasusManagementSystem\application\InterfaceClass\InteLinkClass\InterLinkClass\obj\Debug\InterLinkClass.dll
 D:\Work\PegasusManagementSystem\application\InterfaceClass\InteLinkClass\InterLinkClass\obj\Debug\InterLinkClass.pdb
 D:\Work\PegasusManagementSystem\application\InterfaceClass\InteLinkClass\InterLinkClass\obj\Debug\InterLinkClass.csprojResolveAssemblyReference.cache
+E:\PePay\PegasusInhouseServices\application\InterfaceClass\InteLinkClass\InterLinkClass\bin\Debug\InterLinkClass.dll.config
+E:\PePay\PegasusInhouseServices\application\InterfaceClass\InteLinkClass\InterLinkClass\bin\Debug\InterLinkClass.dll
+E:\PePay\PegasusInhouseServices\application\InterfaceClass\InteLinkClass\InterLinkClass\bin\Debug\InterLinkClass.pdb
+E:\PePay\PegasusInhouseServices\application\InterfaceClass\InteLinkClass\InterLinkClass\obj\Debug\InterLinkClass.dll
+E:\PePay\PegasusInhouseServices\application\InterfaceClass\InteLinkClass\InterLinkClass\obj\Debug\InterLinkClass.pdb

@@ -4,3 +4,8 @@ C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagemen
 C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\SharedCommons\obj\Debug\SharedCommons.dll
 C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\SharedCommons\obj\Debug\SharedCommons.pdb
 C:\Users\JediMaster\Documents\Visual Studio 2015\Projects\PegasusChangeManagementApi\SharedCommons\bin\Debug\Encryption.dll
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\SharedCommons\bin\Debug\SharedCommons.dll
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\SharedCommons\bin\Debug\SharedCommons.pdb
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\SharedCommons\obj\Debug\SharedCommons.dll
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\SharedCommons\obj\Debug\SharedCommons.pdb
+E:\PePay\PegasusInhouseServices\PegasusChangeManagementApi\SharedCommons\obj\Debug\SharedCommons.csprojResolveAssemblyReference.cache

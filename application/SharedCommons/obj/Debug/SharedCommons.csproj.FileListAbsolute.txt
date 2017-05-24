@@ -10,3 +10,8 @@ D:\Work\PegasusManagementSystem\application\SharedCommons\bin\Debug\Encryption.d
 D:\Work\PegasusManagementSystem\application\SharedCommons\obj\Debug\SharedCommons.csprojResolveAssemblyReference.cache
 D:\Work\PegasusManagementSystem\application\SharedCommons\obj\Debug\SharedCommons.dll
 D:\Work\PegasusManagementSystem\application\SharedCommons\obj\Debug\SharedCommons.pdb
+E:\PePay\PegasusInhouseServices\application\SharedCommons\bin\Debug\SharedCommons.dll
+E:\PePay\PegasusInhouseServices\application\SharedCommons\bin\Debug\SharedCommons.pdb
+E:\PePay\PegasusInhouseServices\application\SharedCommons\obj\Debug\SharedCommons.dll
+E:\PePay\PegasusInhouseServices\application\SharedCommons\obj\Debug\SharedCommons.pdb
+E:\PePay\PegasusInhouseServices\application\SharedCommons\obj\Debug\SharedCommons.csprojResolveAssemblyReference.cache
