@@ -1,6 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="SaveSaleItem.ascx.cs" Inherits="SaveSaleItem" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+<%@ Register TagPrefix="uc" TagName="ListSaleItemsUserControl" Src="~/ListSaleItems.ascx" %>
 
 <asp:MultiView ID="MultiView1" ActiveViewIndex="0" runat="server">
     <asp:View ID="CaptureDetailsView" runat="server">
@@ -167,6 +168,9 @@
                 </div>
             </div>
             <hr />
+        </div>
+        <div class="container">
+            <uc:ListSaleItemsUserControl ID="ListSaleItemsUserControl" runat="server" />
         </div>
     </asp:View>
 </asp:MultiView>

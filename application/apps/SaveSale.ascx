@@ -117,7 +117,7 @@
                                         </div>
                                         <div class="col-lg-6">
                                             <label>Total Sale Amount</label>
-                                            <asp:TextBox ID="txtTotalSaleAmount" runat="server" CssClass="form-control total-sale-amount" placeholder="Enter text" onkeyup="javascript:this.value=Comma(this.value);" />
+                                            <asp:TextBox ID="txtTotalSaleAmount" runat="server" CssClass="form-control total-sale-amount" placeholder="Value Auto Calculated" onkeyup="javascript:this.value=Comma(this.value);" />
                                             <p class="help-block">The Name of clients contact</p>
                                         </div>
                                     </div>

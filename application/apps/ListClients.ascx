@@ -81,6 +81,25 @@
             </asp:View>
             <asp:View runat="server" ID="EmptyView">
             </asp:View>
+             <asp:View runat="server" ID="EditView">
+                <div class="row">
+                    <div class="table-responsive">
+                        <asp:GridView runat="server" Width="100%" CssClass="table table-bordered table-hover"
+                            ID="GridView1" OnRowCommand="dataGridResults_RowCommand">
+                            <AlternatingRowStyle BackColor="#BFE4FF" />
+                            <HeaderStyle BackColor="#115E9B" Font-Bold="false" ForeColor="white" Font-Italic="False"
+                                Font-Overline="False" Font-Strikeout="False" Font-Underline="False" Height="30px" />
+                            <Columns>
+                                <asp:TemplateField HeaderText="Details">
+                                    <ItemTemplate>
+                                        <asp:Button ID="btnedit" runat="server" Text="Edit" CommandName="EditEntity" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>" />
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                            </Columns>
+                        </asp:GridView>
+                    </div>
+                </div>
+            </asp:View>
         </asp:MultiView>
 
         <!------------------------------------------------- View2 -------------------------------------------------->

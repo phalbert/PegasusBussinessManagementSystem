@@ -33,6 +33,9 @@
 
         <!---------------------------------------------- Search Options --------------------------------->
         <div class="row">
+            <div class="col-lg-2">
+
+            </div>
             <div class="col-lg-3">
                 <label>
                     Company
@@ -48,9 +51,12 @@
                 </label>
                 <asp:TextBox ID="txtName" runat="server" CssClass="form-control" placeholder="Enter text" />
             </div>
-            <div class="col-lg-3" style="padding-top: 15px;">
+            <div class="col-lg-2" style="padding-top: 15px;">
                 <asp:Button ID="btnSubmit" runat="server" Text="Search DB" CssClass="btn btn-success btn-lg"
                     OnClick="btnSubmit_Click" />
+            </div>
+            <div class="col-lg-2">
+
             </div>
         </div>
 

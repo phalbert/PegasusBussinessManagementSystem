@@ -123,6 +123,7 @@ public partial class SaveSale : System.Web.UI.UserControl, ExternalMessageInterf
         invoice.CurrencyCode = ddCurrencies.SelectedValue;
         invoice.DiscountAmount = txtDiscountAmount.Text;
         invoice.SaleID = txtSaleID.Text;
+        invoice.TaxAmount = txtTaxAmount.Text;
         invoice.TotalSaleAmount = txtTotalSaleAmount.Text;
         invoice.TotalSubTotalAmount = txtTotalSubtotalAmount.Text;
         invoice.ModifiedBy = user.UserId;
@@ -159,7 +160,7 @@ public partial class SaveSale : System.Web.UI.UserControl, ExternalMessageInterf
         txtTaxAmount.Enabled = false;
         txtTotalSaleAmount.Text = GetToTalSaleAmount(sale.TotalSubTotalAmount,txtTaxAmount.Text);
         txtTotalSaleAmount.Enabled = false;
-        TotalsDiv.Visible = false;
+        //TotalsDiv.Visible = false;
     }
 
     private string GetToTalSaleAmount(string totalSubTotalAmount, string taxAmount)

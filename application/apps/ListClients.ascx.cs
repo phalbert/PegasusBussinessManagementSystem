@@ -47,6 +47,11 @@ public partial class ListClients : System.Web.UI.UserControl
         //SearchDb();
     }
 
+    public void SetUpForEdit()
+    {
+        Multiview2.SetActiveView(EditView);
+    }
+
     protected void dataGridResults_RowCommand(object sender, GridViewCommandEventArgs e)
     {
         int index = 0;
@@ -96,14 +101,14 @@ public partial class ListClients : System.Web.UI.UserControl
             dataGridResults.DataSource = dt;
             dataGridResults.DataBind();
             string msg = "Found " + dt.Rows.Count + " Records Matching Search Criteria";
-            Multiview2.ActiveViewIndex = 0;
+            Multiview2.SetActiveView(resultView);
             bll.ShowMessage(lblmsg, msg, false, Session);
         }
         else
         {
             dataGridResults.DataSource = null;
             dataGridResults.DataBind();
-            Multiview2.ActiveViewIndex = -1;
+            Multiview2.SetActiveView(EmptyView);
             string msg = "No Records Found Matching Search Criteria";
             bll.ShowMessage(lblmsg, msg, true, Session);
         }

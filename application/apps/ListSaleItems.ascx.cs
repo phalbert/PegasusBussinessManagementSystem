@@ -80,6 +80,20 @@ public partial class ListSaleItems : System.Web.UI.UserControl
         }
     }
 
+    public void ExternalSearchBySaleID(string SaleId)
+    {
+        txtName.Text = SaleId;
+        txtName.Enabled = false;
+        foreach (DataControlField dcfColumn in dataGridResults.Columns)
+        {
+            if (dcfColumn.HeaderText == "Details")
+            {
+                dcfColumn.Visible = false;
+            }
+        }
+        SearchDb();
+    }
+
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
         try

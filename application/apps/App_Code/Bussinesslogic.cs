@@ -44,8 +44,8 @@ public class Bussinesslogic
             }
 
             vatSetting = result as SystemSetting;
-            int vat = int.Parse(vatSetting.SettingValue);
-            int vatAmount = (vat / 100) * int.Parse(TranAmount);
+            decimal vat = decimal.Parse(vatSetting.SettingValue);
+            decimal vatAmount = ((vat / 100) * (decimal.Parse(TranAmount)));
             return vatAmount.ToString();
         }
         catch (Exception)

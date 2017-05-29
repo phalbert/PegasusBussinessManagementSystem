@@ -170,8 +170,8 @@
                     <% if (user.UserType != "NONE")
                         { %>
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#SysSettings"><i class="fa fa-fw fa-file"></i> Reports<i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="SysSettings" class="collapse">
+                        <a href="javascript:;" data-toggle="collapse" data-target="#Reports"><i class="fa fa-fw fa-file"></i> Reports<i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="Reports" class="collapse">
                             <li>
                                 <a href="Transactions.aspx"><i class="fa fa-caret-right"></i> Search General Ledger</a>
                             </li>
@@ -186,6 +186,9 @@
                         <ul id="SysSettings" class="collapse">
                             <li>
                                 <a href="ChangePassword.aspx"><i class="fa fa-caret-right"></i> Password Management</a>
+                            </li>
+                            <li>
+                                <a href="AddOrEditSystemSetting.aspx"><i class="fa fa-caret-right"></i> Create System Setting</a>
                             </li>
                         </ul>
                      </li>

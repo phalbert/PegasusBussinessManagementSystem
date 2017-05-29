@@ -94,6 +94,7 @@ public partial class SaveSaleItem : System.Web.UI.UserControl,ExternalMessageInt
             msg = "SALE ITEM SAVED SUCCESSFULLY";
             bll.ShowMessage(lblmsg, msg, false, Session);
 
+            ListSaleItemsUserControl.ExternalSearchBySaleID(txtSaleID.Text);
             MultiView1.SetActiveView(ConfirmView);
         }
         catch (Exception ex)
