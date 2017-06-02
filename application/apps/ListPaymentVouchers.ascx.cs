@@ -55,6 +55,7 @@ public partial class ListPaymentVouchers : System.Web.UI.UserControl
         row = grid.Rows[index];
         string Id = row.Cells[1].Text;
         string BankCode = row.Cells[1].Text;
+        string InvoiceNumber = row.Cells[3].Text;
 
         if (e.CommandName.Equals("EditEntity"))
         {
@@ -68,7 +69,7 @@ public partial class ListPaymentVouchers : System.Web.UI.UserControl
             {
                 MyEventArgs eventArgs = new MyEventArgs();
                 eventArgs.PegPayId = Id;
-                eventArgs.RequestID = "";
+                eventArgs.RequestID = InvoiceNumber;
 
                 CompleteVoucherPaymentEvent(sender, eventArgs);
             }

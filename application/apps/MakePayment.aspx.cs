@@ -12,6 +12,7 @@ public partial class MakePayment : System.Web.UI.Page
         try
         {
             //subscripe to events from user controls
+            SaveInvoiceUserControl.SaveCompleted += new EventHandler(SaveInvoiceCompleted);
             SavePurchase.SaveCompleted += new EventHandler(SavePurchaseCompleted);
             SavePaymentVoucher.SaveCompleted += new EventHandler(SavePaymentVoucherCompleted);
             ListSuppliers.RegisterPurchaseEvent += new EventHandler(RegisterPurchaseRaised);
@@ -31,6 +32,16 @@ public partial class MakePayment : System.Web.UI.Page
         }
     }
 
+    private void SaveInvoiceCompleted(object sender, EventArgs e)
+    {
+        MyEventArgs eventArgs = e as MyEventArgs;
+        string SupplierId = eventArgs.PegPayId;
+        string PurchaseId = eventArgs.ThirdPartyId;
+        SavePurchase.LoadDataSpecificForSupplier(eventArgs);
+        MultiView.SetActiveView(SavePurchaseView);
+        HighLightCorrectTab();
+    }
+
     private void LoadData()
     {
         HighLightCorrectTab();
@@ -40,8 +51,8 @@ public partial class MakePayment : System.Web.UI.Page
     {
         MyEventArgs eventArgs = e as MyEventArgs;
         string Id = eventArgs.PegPayId;
-        SavePurchase.LoadDataSpecificForSupplier(Id);
-        MultiView.SetActiveView(SavePurchaseView);
+        SaveInvoiceUserControl.LoadDataSpecificForPurchase(eventArgs);
+        MultiView.SetActiveView(SaveInvoiceView);
         HighLightCorrectTab();
     }
 
@@ -50,6 +61,11 @@ public partial class MakePayment : System.Web.UI.Page
         if (MultiView.GetActiveView() == ListSuppliersView)
         {
             SetActiveTab(ListSuppliersLink);
+            return;
+        }
+        if (MultiView.GetActiveView() == SaveInvoiceView)
+        {
+            SetActiveTab(SaveInvoiceLink);
             return;
         }
         if (MultiView.GetActiveView() == SavePurchaseView)
@@ -70,6 +86,7 @@ public partial class MakePayment : System.Web.UI.Page
         ListSuppliersLink.Attributes["class"] = "";
         SavePurchaseLink.Attributes["class"] = "";
         SavePaymentVoucherLink.Attributes["class"] = "";
+        SaveInvoiceLink.Attributes["class"] = "";
         control.Attributes["class"] = "active";
     }
 
@@ -78,7 +95,6 @@ public partial class MakePayment : System.Web.UI.Page
         MyEventArgs eventArgs = e as MyEventArgs;
         MultiView.SetActiveView(SavePaymentVoucherView);
         SavePaymentVoucher.SetInvoiceSelected(eventArgs.ThirdPartyId);
-        SavePaymentVoucher.ShowExternalMessage();
         HighLightCorrectTab();
     }
 

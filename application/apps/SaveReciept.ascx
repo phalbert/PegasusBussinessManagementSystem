@@ -181,10 +181,6 @@
                 </div>
             </div>
         </div>
-        <ajaxToolkit:ToolkitScriptManager ID="ScriptManager1" runat="Server" EnableScriptGlobalization="true"
-            EnableScriptLocalization="true">
-        </ajaxToolkit:ToolkitScriptManager>
-        <br />
         <ajaxToolkit:CalendarExtender ID="CalendarExtender1" runat="server" CssClass="cal_Theme1"
             Format="yyyy-MM-dd" PopupPosition="BottomRight" TargetControlID="txtPaymentDate">
         </ajaxToolkit:CalendarExtender>

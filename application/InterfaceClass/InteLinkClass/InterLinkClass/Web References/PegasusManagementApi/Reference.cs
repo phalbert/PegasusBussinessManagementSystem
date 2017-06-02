@@ -1312,6 +1312,8 @@ namespace InterLinkClass.PegasusManagementApi {
         
         private string currencyCodeField;
         
+        private string purchaseIDField;
+        
         /// <remarks/>
         public string SupplierCode {
             get {
@@ -1419,6 +1421,16 @@ namespace InterLinkClass.PegasusManagementApi {
             }
             set {
                 this.currencyCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string PurchaseID {
+            get {
+                return this.purchaseIDField;
+            }
+            set {
+                this.purchaseIDField = value;
             }
         }
     }
@@ -2066,6 +2078,8 @@ namespace InterLinkClass.PegasusManagementApi {
         
         private string isPaidField;
         
+        private string correlationIdField;
+        
         /// <remarks/>
         public string InvoiceDate {
             get {
@@ -2193,6 +2207,16 @@ namespace InterLinkClass.PegasusManagementApi {
             }
             set {
                 this.isPaidField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string CorrelationId {
+            get {
+                return this.correlationIdField;
+            }
+            set {
+                this.correlationIdField = value;
             }
         }
     }

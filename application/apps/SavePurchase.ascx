@@ -141,6 +141,11 @@
                                             </asp:DropDownList>
                                             <p class="help-block">Is the Purchase Paid for</p>
                                         </div>
+                                        <div class="col-lg-6">
+                                            <label>Purchase ID</label>
+                                            <asp:TextBox ID="txtPurchaseID" runat="server" CssClass="form-control" placeholder="Enter text" />
+                                            <p class="help-block">ID for this purchase</p>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -161,10 +166,6 @@
             </div>
         </div>
 
-        <ajaxToolkit:ToolkitScriptManager ID="ScriptManager1" runat="Server" EnableScriptGlobalization="true"
-            EnableScriptLocalization="true">
-        </ajaxToolkit:ToolkitScriptManager>
-        <br />
         <ajaxToolkit:CalendarExtender ID="CalendarExtender1" runat="server" CssClass="cal_Theme1"
             Format="yyyy-MM-dd" PopupPosition="BottomRight" TargetControlID="txtInvoiceDate">
         </ajaxToolkit:CalendarExtender>

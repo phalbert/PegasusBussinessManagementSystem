@@ -61,7 +61,7 @@ public partial class CompletePayment : System.Web.UI.Page
     {
         MyEventArgs eventArgs = e as MyEventArgs;
         MultiView.SetActiveView(SaveRecieptView);
-        SaveRecieptUserControl.ShowExternalMessage();
+        SaveRecieptUserControl.LoadDataSpecificForPurchase(eventArgs);
         HighLightCorrectTab();
     }
 

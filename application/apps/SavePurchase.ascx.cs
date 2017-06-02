@@ -5,18 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class SavePurchase : System.Web.UI.UserControl,ExternalMessageInterface
+public partial class SavePurchase : System.Web.UI.UserControl, ExternalMessageInterface
 {
-    public string ddSupplierCode_SelectedValue
-    {
-        get { return ddSuppliers.SelectedValue; }
-        set { ddSuppliers.SelectedValue = value; }
-    }
     public event EventHandler SaveCompleted;
     Bussinesslogic bll = new Bussinesslogic();
     SystemUser user = new SystemUser();
     MSystemService client = new MSystemService();
-    
+
     protected void Page_Load(object sender, EventArgs e)
     {
         try
@@ -62,9 +57,11 @@ public partial class SavePurchase : System.Web.UI.UserControl,ExternalMessageInt
         ddIsPaid.Enabled = false;
         bll.LoadCompaniesIntoDropDown(user, ddCompanies);
         bll.LoadSuppliersIntoDropDown(ddCompanies.SelectedValue, user, ddSuppliers);
-        bll.LoadUnpaidInvoicesForSupplierIntoDropDown(ddCompanies.SelectedValue, user, ddInvoices,ddSuppliers.SelectedValue);
+        bll.LoadUnpaidInvoicesForSupplierIntoDropDown(ddCompanies.SelectedValue, user, ddInvoices, ddSuppliers.SelectedValue);
         bll.LoadCurrenciesIntoDropDown(ddCompanies.SelectedValue, user, ddCurrencies);
         bll.ShowExternalMessage(lblmsg, Session);
+        txtPurchaseID.Text = SharedCommons.SharedCommons.GenerateUniqueId("PCH");
+        txtPurchaseID.Enabled = false;
     }
 
     private void LoadEntityData(string id)
@@ -74,12 +71,25 @@ public partial class SavePurchase : System.Web.UI.UserControl,ExternalMessageInt
         ddIsPaid.Enabled = true;
     }
 
-    public void LoadDataSpecificForSupplier(string supplierId)
+    public void LoadDataSpecificForSupplier(MyEventArgs eventArgs)
     {
-        ddSuppliers.SelectedValue = supplierId;
-        ddSuppliers.Enabled = false;
-        bll.LoadUnpaidInvoicesForSupplierIntoDropDown(ddCompanies.SelectedValue, user, ddInvoices, ddSuppliers.SelectedValue);
-        LoadInvoiceDetailsById(ddInvoices.SelectedValue);
+        try
+        {
+            bll.LoadUnpaidInvoicesForSupplierIntoDropDown(ddCompanies.SelectedValue, user, ddInvoices, ddSuppliers.SelectedValue);
+            ddSuppliers.SelectedValue = eventArgs.RequestID;
+            ddSuppliers.Enabled = false;
+            txtPurchaseID.Text = eventArgs.ThirdPartyId;
+            txtPurchaseID.Enabled = false;
+            ddInvoices.SelectedValue = eventArgs.PegPayId;
+            ddInvoices.Enabled = false;
+            LoadInvoiceDetailsById(ddInvoices.SelectedValue);
+            ShowExternalMessage();
+        }
+        catch (Exception ex)
+        {
+            bll.LogError("SAVE-CLIENT", ex.StackTrace, "", ex.Message, "EXCEPTION");
+            bll.ShowMessage(lblmsg, ex.Message, true, Session);
+        }
     }
 
     private void LoadInvoiceDetailsById(string selectedValue)
@@ -98,7 +108,8 @@ public partial class SavePurchase : System.Web.UI.UserControl,ExternalMessageInt
         txtAnyOtherTax.Text = invoice.AnyOtherTax;
         txtDiscountAmount.Text = invoice.DiscountAmount;
         txtToTalInvoiceAmount.Text = invoice.TotalInvoiceAmount;
-
+        ddCurrencies.SelectedValue = invoice.CurrencyCode;
+        ddCurrencies.Enabled = false;
         txtInvoiceAmount.Enabled = false;
         txtInvoiceDate.Enabled = false;
         txtTaxAmount.Enabled = false;
@@ -115,6 +126,7 @@ public partial class SavePurchase : System.Web.UI.UserControl,ExternalMessageInt
         }
         catch (Exception ex)
         {
+            bll.LogError("SAVE-CLIENT", ex.StackTrace, "", ex.Message, "EXCEPTION");
             bll.ShowMessage(lblmsg, ex.Message, true, Session);
         }
     }
@@ -183,6 +195,7 @@ public partial class SavePurchase : System.Web.UI.UserControl,ExternalMessageInt
         client.TotalInvoiceAmount = txtToTalInvoiceAmount.Text;
         client.ModifiedBy = user.UserId;
         client.IsPaid = ddIsPaid.SelectedValue;
+        client.PurchaseID = txtPurchaseID.Text;
         return client;
     }
 

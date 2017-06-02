@@ -95,7 +95,7 @@
                                         <div class="col-lg-6">
                                             <label>Discount Amount</label>
                                             <asp:TextBox ID="txtDiscountAmount" runat="server" Text="0.00" CssClass="form-control discount-amount" placeholder="Enter text" onkeyup="javascript:this.value=Comma(this.value);"/>
-                                            <p class="help-block">The Mobile Number of this client</p>
+                                            <p class="help-block">Any discount Amount applicable</p>
                                         </div>
                                     </div>
 
@@ -106,6 +106,7 @@
                                                 <asp:ListItem>False</asp:ListItem>
                                                 <asp:ListItem>True</asp:ListItem>
                                             </asp:DropDownList>
+                                            <p class="help-block">The currency of the Amounts</p>
                                         </div>
                                     </div>
 
@@ -113,12 +114,12 @@
                                         <div class="col-lg-6">
                                             <label>Tax Amount</label>
                                             <asp:TextBox ID="txtTaxAmount" runat="server" CssClass="form-control tax-amount" Text="0.00" placeholder="Enter text" onkeyup="javascript:this.value=Comma(this.value);" />
-                                            <p class="help-block">The Location of this client</p>
+                                            <p class="help-block">VAT % (<asp:Label ID="lblVAT" runat="server" Text="0"></asp:Label>% of Total Subtotal)</p>
                                         </div>
                                         <div class="col-lg-6">
                                             <label>Total Sale Amount</label>
                                             <asp:TextBox ID="txtTotalSaleAmount" runat="server" CssClass="form-control total-sale-amount" placeholder="Value Auto Calculated" onkeyup="javascript:this.value=Comma(this.value);" />
-                                            <p class="help-block">The Name of clients contact</p>
+                                            <p class="help-block">((Total Subtotal+Taxes)-Discounts)This Value will be Auto Calculated on Save</p>
                                         </div>
                                     </div>
 

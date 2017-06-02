@@ -262,6 +262,7 @@
               <s:element minOccurs="0" maxOccurs="1" name="InvoiceCategory" type="s:string" />
               <s:element minOccurs="0" maxOccurs="1" name="ImageOfInvoice" type="s:string" />
               <s:element minOccurs="0" maxOccurs="1" name="IsPaid" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CorrelationId" type="s:string" />
             </s:sequence>
           </s:extension>
         </s:complexContent>
@@ -452,6 +453,7 @@
               <s:element minOccurs="0" maxOccurs="1" name="TotalInvoiceAmount" type="s:string" />
               <s:element minOccurs="0" maxOccurs="1" name="IsPaid" type="s:string" />
               <s:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PurchaseID" type="s:string" />
             </s:sequence>
           </s:extension>
         </s:complexContent>

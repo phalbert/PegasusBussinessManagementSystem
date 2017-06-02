@@ -12,5 +12,6 @@ E:\PePay\PegasusInhouseServices\application\SharedCommons\obj\Debug\SharedCommon
 D:\Work\PegasusManagementSystem\application\SharedCommons\bin\Debug\SharedCommons.dll
 D:\Work\PegasusManagementSystem\application\SharedCommons\bin\Debug\SharedCommons.pdb
 D:\Work\PegasusManagementSystem\application\SharedCommons\bin\Debug\Encryption.dll
+D:\Work\PegasusManagementSystem\application\SharedCommons\obj\Debug\SharedCommons.csprojResolveAssemblyReference.cache
 D:\Work\PegasusManagementSystem\application\SharedCommons\obj\Debug\SharedCommons.dll
 D:\Work\PegasusManagementSystem\application\SharedCommons\obj\Debug\SharedCommons.pdb

@@ -3,6 +3,7 @@
 <%@ Import Namespace="System.Data" %>
 <%@ Import Namespace="System.Collections.Generic" %>
 <%@ Import Namespace="InterLinkClass.PegasusManagementApi" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!DOCTYPE html>
 <html lang="en">
@@ -203,6 +204,11 @@
                     </asp:ContentPlaceHolder>
                 </div>
             </div>
+
+            <ajaxToolkit:ToolkitScriptManager ID="ScriptManager1" runat="Server" EnableScriptGlobalization="true"
+                EnableScriptLocalization="true">
+            </ajaxToolkit:ToolkitScriptManager>
+            <br />
         </div>
 
         <!-------------------------- Placed at the end of the document so the pages load faster ------------------------------->

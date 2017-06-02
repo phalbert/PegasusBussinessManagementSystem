@@ -105,27 +105,20 @@
                                             <asp:TextBox ID="txtAnyotherTax" Text="0.00" runat="server" CssClass="form-control" placeholder="Enter text" onkeyup="javascript:this.value=Comma(this.value);" />
                                             <p class="help-block">The Mobile Number of this client</p>
                                         </div>
-                                        <div class="col-lg-6">
-                                            <label>Brief Desc of Invoice Items/Reason</label>
-                                            <asp:TextBox ID="txtReason" runat="server" CssClass="form-control" placeholder="Enter text" />
-                                            <p class="help-block">The Name of clients contact</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
+                                        
                                         <div class="col-lg-6">
                                             <label>Discount Amount</label>
                                             <asp:TextBox ID="txtDiscountAmount" Text="0.00" runat="server" CssClass="form-control" placeholder="Enter text" onkeyup="javascript:this.value=Comma(this.value);" />
                                             <p class="help-block">The Email address of this client</p>
                                         </div>
+                                    </div>
+
+                                    <div class="row">
                                         <div class="col-lg-6">
                                             <label>Total Invoice Amount</label>
                                             <asp:TextBox ID="txtTotalInvoiceAmount" Text="0.00" runat="server" CssClass="form-control" placeholder="Enter text" onkeyup="javascript:this.value=Comma(this.value);" />
                                             <p class="help-block">(Invoice Amount+Taxes)-(Discounts)</p>
                                         </div>
-                                    </div>
-
-                                    <div class="row">
                                         <div class="col-lg-6">
                                             <label>Currency</label>
                                             <asp:DropDownList ID="ddCurrencies" runat="server" CssClass="form-control">
@@ -134,6 +127,9 @@
                                             </asp:DropDownList>
                                             <p class="help-block">The Currency</p>
                                         </div>
+                                    </div>
+
+                                    <div class="row">
                                         <div class="col-lg-6">
                                             <label>Invoice Category</label>
                                             <asp:DropDownList ID="ddInvoiceType" runat="server" CssClass="form-control">
@@ -141,14 +137,6 @@
                                                 <asp:ListItem Value="CLIENT_INVOICE">Clients Invoice</asp:ListItem>
                                             </asp:DropDownList>
                                             <p class="help-block">The Category to which this invoice Belongs</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <label>Image Of Invoice</label>
-                                            <asp:FileUpload ID="fuInvoiceImage" runat="server" CssClass="form-control" />
-                                            <p class="help-block">Scanned Image of Invoice</p>
                                         </div>
                                         <div class="col-lg-6">
                                             <label>Is Paid</label>
@@ -159,7 +147,26 @@
                                             <p class="help-block">Is Invoice Already Paid</p>
                                         </div>
                                     </div>
+                                     <div class="row">
+                                         <div class="col-lg-6"> 
+                                            <label>Correlation ID</label>
+                                            <asp:TextBox ID="txtCorrelationID" Text="0.00" runat="server" CssClass="form-control" placeholder="Enter text" onkeyup="javascript:this.value=Comma(this.value);" />
+                                            <p class="help-block">The Email address of this client</p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <label>Brief Desc of Invoice Items/Reason</label>
+                                            <asp:TextBox TextMode="MultiLine" Columns="50" Rows="5" ID="txtReason" runat="server" CssClass="form-control" placeholder="Enter text" />
+                                            <p class="help-block">The Name of clients contact</p>
+                                        </div>
+                                    </div>
 
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <label>Image Of Invoice</label>
+                                            <asp:FileUpload ID="fuInvoiceImage" runat="server" CssClass="form-control" />
+                                            <p class="help-block">Scanned Image of Invoice</p>
+                                        </div>
+                                    </div>
                                 </div>
 
 
@@ -180,15 +187,11 @@
                 </div>
             </div>
         </div>
-        <ajaxToolkit:ToolkitScriptManager ID="ScriptManager1" runat="Server" EnableScriptGlobalization="true"
-            EnableScriptLocalization="true">
-        </ajaxToolkit:ToolkitScriptManager>
-        <br />
         <ajaxToolkit:CalendarExtender ID="CalendarExtender1" runat="server" CssClass="cal_Theme1"
             Format="yyyy-MM-dd" PopupPosition="BottomRight" TargetControlID="txtxInvoiceDate">
         </ajaxToolkit:CalendarExtender>
 
-        
+
     </asp:View>
 
     <%------------------------------------------------------------ Confirm View ------------------------------- --%>

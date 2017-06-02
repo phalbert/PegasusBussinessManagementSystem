@@ -83,7 +83,6 @@ public partial class MakeASale : System.Web.UI.Page
         MyEventArgs eventArgs = e as MyEventArgs;
         MultiView.SetActiveView(SaveSaleItemsView);
         SaveSaleItemsControl.LoadDataSpecificForSale(eventArgs);
-        SaveSaleItemsControl.ShowExternalMessage();
         HighLightCorrectTab();
     }
 

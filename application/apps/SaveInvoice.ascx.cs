@@ -56,8 +56,10 @@ public partial class SaveInvoice : System.Web.UI.UserControl, ExternalMessageInt
         btnEdit.Visible = false;
         bll.LoadCompaniesIntoDropDown(user, ddCompanies);
         bll.LoadCurrenciesIntoDropDown(ddCompanies.SelectedValue, user, ddCurrencies);
-        bll.LoadClientsAndSuppliersIntoDropDown(ddCompanies.SelectedValue, user, ddClientName);
+        bll.LoadSuppliersIntoDropDown(ddCompanies.SelectedValue, user, ddClientName);
         bll.LoadInvoiceCatgoriesIntoDropDown(ddCompanies.SelectedValue, user, ddInvoiceType);
+        txtCorrelationID.Text = SharedCommons.SharedCommons.GenerateUniqueId("PCH");
+        txtCorrelationID.Enabled = false;
         ddIsPaid.Enabled = false;
         ddInvoiceType.Enabled = false;
         ddClientName_SelectedIndexChanged(null, null);
@@ -104,6 +106,8 @@ public partial class SaveInvoice : System.Web.UI.UserControl, ExternalMessageInt
             {
                 MyEventArgs eventArgs = new MyEventArgs();
                 eventArgs.PegPayId = txtInvoiceNumber.Text;
+                eventArgs.RequestID = ddClientName.SelectedValue;
+                eventArgs.ThirdPartyId = txtCorrelationID.Text;
 
                 //Pass on msg
                 Session["ExternalMsg"] = msg;
@@ -111,7 +115,10 @@ public partial class SaveInvoice : System.Web.UI.UserControl, ExternalMessageInt
                 SaveCompleted(sender, eventArgs);
             }
 
-            Server.Transfer("~/PrintInvoice.aspx?CompanyCode=" + invoice.CompanyCode + "&Id=" + invoice.InvoiceNumber);
+            if (ddInvoiceType.SelectedValue == "CLIENT_INVOICE")
+            {
+                Server.Transfer("~/PrintInvoice.aspx?CompanyCode=" + invoice.CompanyCode + "&Id=" + invoice.InvoiceNumber);
+            }
         }
         catch (Exception ex)
         {
@@ -139,6 +146,7 @@ public partial class SaveInvoice : System.Web.UI.UserControl, ExternalMessageInt
         invoice.InvoiceCategory = ddInvoiceType.SelectedValue;
         invoice.ImageOfInvoice = bll.GetImageUploadedInBase64String(fuInvoiceImage);
         invoice.ModifiedBy = this.user.UserId;
+        invoice.CorrelationId = txtCorrelationID.Text;
         return invoice;
     }
 
@@ -157,6 +165,22 @@ public partial class SaveInvoice : System.Web.UI.UserControl, ExternalMessageInt
     public void ShowExternalMessage()
     {
         bll.ShowExternalMessage(lblmsg, Session);
+    }
+
+    public void LoadDataSpecificForPurchase(MyEventArgs eventArgs)
+    {
+        try
+        {
+            string supplierCode = eventArgs.PegPayId;
+            ddClientName.SelectedValue = supplierCode;
+            ddClientName.Enabled = false;
+            ShowExternalMessage();
+        }
+        catch (Exception ex)
+        {
+            bll.LogError("SAVE-CLIENT", ex.StackTrace, "", ex.Message, "EXCEPTION");
+            bll.ShowMessage(lblmsg, ex.Message, true, Session);
+        }
     }
 
     public void LoadDataSpecificForSale(MyEventArgs eventArgs)
@@ -181,14 +205,19 @@ public partial class SaveInvoice : System.Web.UI.UserControl, ExternalMessageInt
             txtxInvoiceDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
             txtTotalInvoiceAmount.Text = sale.TotalSaleAmount;
             txtTaxAmount.Text = sale.TaxAmount;
+            txtReason.Text = bll.GetSaleItemsForNarration(saleID);
+            txtCorrelationID.Text = saleID;
+            txtCorrelationID.Enabled = false;
             ddCompanies.SelectedValue = sale.CompanyCode;
             ddClientName.SelectedValue = sale.ClientCode;
             ddCurrencies.SelectedValue = sale.CurrencyCode;
+            bll.LoadClientsIntoDropDown(ddCompanies.SelectedValue, user, ddClientName);
             ddIsPaid.SelectedValue = "FALSE";
             ddIsPaid.Enabled = false;
             ddInvoiceType.SelectedValue = "CLIENT_INVOICE";
             ddInvoiceType.Enabled = false;
             fuInvoiceImage.Enabled = false;
+            ShowExternalMessage();
         }
         catch (Exception ex)
         {
@@ -211,7 +240,7 @@ public partial class SaveInvoice : System.Web.UI.UserControl, ExternalMessageInt
             {
                 ddInvoiceType.SelectedValue = "SUPPLIER_INVOICE";
             }
-            else if(theClient.ClientCategory == "CLIENT")
+            else if (theClient.ClientCategory == "CLIENT")
             {
                 ddInvoiceType.SelectedValue = "CLIENT_INVOICE";
             }

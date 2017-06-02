@@ -21,7 +21,7 @@ public partial class CompleteSale : System.Web.UI.Page
             }
             else
             {
-                LoadData();
+                
             }
         }
         catch (Exception ex)
@@ -30,7 +30,28 @@ public partial class CompleteSale : System.Web.UI.Page
         }
     }
 
-    private void LoadData()
+    protected void Page_LoadComplete(object sender, EventArgs e)
+    {
+        try
+        {
+           
+            if (IsPostBack)
+            {
+
+            }
+            else
+            {
+                LoadDataAfterPageLoad();
+            }
+        }
+        catch (Exception ex)
+        {
+
+        }
+    }
+
+
+    private void LoadDataAfterPageLoad()
     {
         HighLightCorrectTab();
         ListInvoicesUserControl.SetSearchParametersForUnpaidInvoices();
@@ -63,7 +84,6 @@ public partial class CompleteSale : System.Web.UI.Page
         string invoiceNumber = eventArgs.PegPayId;
         MultiView.SetActiveView(SaveRecieptView);
         SaveRecieptUserControl.LoadDataSpecificForSale(invoiceNumber);
-        SaveRecieptUserControl.ShowExternalMessage();
         HighLightCorrectTab();
     }
 

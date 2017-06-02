@@ -148,23 +148,24 @@ public partial class SavePaymentVoucher : System.Web.UI.UserControl, ExternalMes
     {
         try
         {
+            bll.LoadUnpaidInvoicesIntoDropDown(ddCompanies.SelectedValue, user, ddInvoices);
             ddInvoices.SelectedValue = InvoiceNumber;
             ddInvoices.Enabled = false;
-
+           
             //get the invoice
             Entity result = client.GetById(ddCompanies.SelectedValue, "INVOICE", InvoiceNumber);
 
             //error on retrieving the invoice
             if (result.StatusCode != Globals.SUCCESS_STATUS_CODE)
             {
-                //handle the failure
-                return;
+                throw new Exception("FAILED: " + result.StatusDesc);
             }
 
             //set the voucher amount to default to invoice amount
             Invoice invoice = result as Invoice;
             txtVoucherAmount.Text = invoice.TotalInvoiceAmount;
             txtVoucherCode.Text = SharedCommons.SharedCommons.GenerateUniqueId("VCH");
+            ShowExternalMessage();
         }
         catch (Exception ex)
         {

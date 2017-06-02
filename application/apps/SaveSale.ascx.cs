@@ -142,25 +142,34 @@ public partial class SaveSale : System.Web.UI.UserControl, ExternalMessageInterf
 
     public void LoadDataSpecificForSale(MyEventArgs eventArgs)
     {
-        string SaleID = eventArgs.PegPayId;
-        string clientCode = eventArgs.ThirdPartyId;
-        Sale sale = CalculateSaleValues(SaleID);
-        if (sale.StatusCode != Globals.SUCCESS_STATUS_CODE)
+        try
         {
-            return;
+            string SaleID = eventArgs.PegPayId;
+            string clientCode = eventArgs.ThirdPartyId;
+            Sale sale = CalculateSaleValues(SaleID);
+            if (sale.StatusCode != Globals.SUCCESS_STATUS_CODE)
+            {
+                return;
+            }
+
+            txtSaleID.Text = SaleID;
+            txtTotalSubtotalAmount.Text = sale.TotalSubTotalAmount;
+            txtSaleID.Enabled = false;
+            txtTotalSubtotalAmount.Enabled = false;
+            ddClients.SelectedValue = clientCode;
+            ddClients.Enabled = false;
+            txtTaxAmount.Text = bll.GetVATValueElseZero(ddCompanies.SelectedValue, sale.TotalSubTotalAmount, lblVAT);
+            txtTaxAmount.Enabled = false;
+            txtTotalSaleAmount.Text = GetToTalSaleAmount(sale.TotalSubTotalAmount, txtTaxAmount.Text);
+            txtTotalSaleAmount.Enabled = false;
+            ShowExternalMessage();
+            //TotalsDiv.Visible = false;
         }
-        
-        txtSaleID.Text = SaleID;
-        txtTotalSubtotalAmount.Text = sale.TotalSubTotalAmount;
-        txtSaleID.Enabled = false;
-        txtTotalSubtotalAmount.Enabled = false;
-        ddClients.SelectedValue = clientCode;
-        ddClients.Enabled = false;
-        txtTaxAmount.Text = bll.GetVATValueElseZero(ddCompanies.SelectedValue, sale.TotalSubTotalAmount);
-        txtTaxAmount.Enabled = false;
-        txtTotalSaleAmount.Text = GetToTalSaleAmount(sale.TotalSubTotalAmount,txtTaxAmount.Text);
-        txtTotalSaleAmount.Enabled = false;
-        //TotalsDiv.Visible = false;
+        catch (Exception ex)
+        {
+            bll.LogError("SAVE-CLIENT", ex.StackTrace, "", ex.Message, "EXCEPTION");
+            bll.ShowMessage(lblmsg, ex.Message, true, Session);
+        }
     }
 
     private string GetToTalSaleAmount(string totalSubTotalAmount, string taxAmount)

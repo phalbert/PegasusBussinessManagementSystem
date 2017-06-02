@@ -101,10 +101,6 @@
             <asp:View runat="server" ID="EmptyView">
             </asp:View>
         </asp:MultiView>
-        <ajaxToolkit:ToolkitScriptManager ID="ScriptManager1" runat="Server" EnableScriptGlobalization="true"
-            EnableScriptLocalization="true">
-        </ajaxToolkit:ToolkitScriptManager>
-        <br />
         <ajaxToolkit:CalendarExtender ID="CalendarExtender1" runat="server" CssClass="cal_Theme1"
             Format="yyyy-MM-dd" PopupPosition="BottomRight" TargetControlID="txtStartDate">
         </ajaxToolkit:CalendarExtender>

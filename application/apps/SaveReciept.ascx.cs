@@ -145,7 +145,10 @@ public partial class SaveReciept : System.Web.UI.UserControl, ExternalMessageInt
                 this.SaveCompleted(this, eventArgs);
             }
 
-            Server.Transfer("~/PrintReciept.aspx?CompanyCode=" + reciept.CompanyCode + "&Id=" + reciept.RecieptNumber);
+            if (ddRecieptCategory.SelectedValue == "CLIENT_RECIEPT")
+            {
+                Server.Transfer("~/PrintReciept.aspx?CompanyCode=" + reciept.CompanyCode + "&Id=" + reciept.RecieptNumber);
+            }
         }
         catch (Exception ex)
         {
@@ -185,25 +188,66 @@ public partial class SaveReciept : System.Web.UI.UserControl, ExternalMessageInt
 
     }
 
+    public void LoadDataSpecificForPurchase(MyEventArgs eventArgs)
+    {
+        try
+        {
+            string InvoiceNumber = eventArgs.RequestID;
+            Entity result = client.GetById(ddCompanies.SelectedValue, "INVOICE", InvoiceNumber);
+            if (result.StatusCode != Globals.SUCCESS_STATUS_CODE)
+            {
+                throw new Exception("FAILED: " + result.StatusDesc);
+            }
+            Invoice invoice = result as Invoice;
+            ddClients.SelectedValue = invoice.ClientCode;
+            ddClients.Enabled = false;
+            ddClientName_SelectedIndexChanged(null, null);
+            ddInvoices.SelectedValue = InvoiceNumber;
+            ddInvoices_SelectedIndexChanged(null, null);
+            txtPaymentDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            ddInvoices.Enabled = false;
+            ddRecieptCategory.SelectedValue = "SUPPLIER_RECIEPT";
+            ddRecieptCategory.Enabled = false;
+            ddPaymentTypes_SelectedIndexChanged(null, null);
+            ShowExternalMessage();
+        }
+        catch (Exception ex)
+        {
+            bll.LogError("SAVE-CLIENT", ex.StackTrace, "", ex.Message, "EXCEPTION");
+            bll.ShowMessage(lblmsg, ex.Message, true, Session);
+        }
+    }
+
     public void LoadDataSpecificForSale(string InvoiceNumber)
     {
-        Entity result = client.GetById(ddCompanies.SelectedValue, "INVOICE", InvoiceNumber);
-        if (result.StatusCode != Globals.SUCCESS_STATUS_CODE)
+        try
         {
-            return;
+            Entity result = client.GetById(ddCompanies.SelectedValue, "INVOICE", InvoiceNumber);
+            if (result.StatusCode != Globals.SUCCESS_STATUS_CODE)
+            {
+                return;
+            }
+            Invoice invoice = result as Invoice;
+            ddClients.SelectedValue = invoice.ClientCode;
+            ddClients.Enabled = false;
+            ddClientName_SelectedIndexChanged(null, null);
+            ddInvoices.SelectedValue = InvoiceNumber;
+            ddInvoices_SelectedIndexChanged(null, null);
+            txtRecieptNumber.Text = SharedCommons.SharedCommons.GenerateUniqueId("RCPT");
+            txtPaymentDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            ddInvoices.Enabled = false;
+            txtRecieptNumber.Enabled = false;
+            ddRecieptCategory.SelectedValue = "CLIENT_RECIEPT";
+            ddRecieptCategory.Enabled = false;
+            ddPaymentTypes_SelectedIndexChanged(null, null);
+            fuRecieptImage.Enabled = false;
+            ShowExternalMessage();
         }
-        Invoice invoice = result as Invoice;
-        ddClients.SelectedValue = invoice.ClientCode;
-        ddClients.Enabled = false;
-        ddInvoices.SelectedValue = InvoiceNumber;
-        txtRecieptNumber.Text = SharedCommons.SharedCommons.GenerateUniqueId("RCPT");
-        txtPaymentDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
-        ddInvoices.Enabled = false;
-        txtRecieptNumber.Enabled = false;
-        ddRecieptCategory.SelectedValue = "CLIENT_RECIEPT";
-        ddRecieptCategory.Enabled = false;
-        ddPaymentTypes_SelectedIndexChanged(null, null);
-        fuRecieptImage.Enabled = false;
+        catch (Exception ex)
+        {
+            bll.LogError("SAVE-CLIENT", ex.StackTrace, "", ex.Message, "EXCEPTION");
+            bll.ShowMessage(lblmsg, ex.Message, true, Session);
+        }
     }
 
     public void ShowExternalMessage()

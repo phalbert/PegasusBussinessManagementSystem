@@ -42,7 +42,17 @@
                     <asp:ListItem>False</asp:ListItem>
                 </asp:DropDownList>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-2">
+                <label>
+                    Invoice Category
+                </label>
+                <asp:DropDownList ID="ddinvoiceCategory" runat="server" CssClass="form-control">
+                    <asp:ListItem Value="ALL">ALL</asp:ListItem>
+                    <asp:ListItem Value="TRUE">YES</asp:ListItem>
+                    <asp:ListItem Value="FALSE">NO</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+            <div class="col-lg-2">
                 <label>
                     Is Paid
                 </label>
@@ -58,7 +68,7 @@
                 </label>
                 <asp:TextBox ID="txtName" runat="server" CssClass="form-control" placeholder="Enter text" />
             </div>
-            <div class="col-lg-3" style="padding-top: 15px;">
+            <div class="col-lg-2" style="padding-top: 15px;">
                 <asp:Button ID="btnSubmit" runat="server" Text="Search DB" CssClass="btn btn-success btn-lg"
                     OnClick="btnSubmit_Click" />
             </div>

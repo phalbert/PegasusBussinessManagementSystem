@@ -48,7 +48,7 @@
 
                             <div class="panel panel-success">
 
-                                 <div class="panel-heading text-center">
+                                <div class="panel-heading text-center">
                                     SUPPLY THE CONTRACT DETAILS USING THE FORM BELOW
                                 </div>
 
@@ -64,7 +64,7 @@
                                         </div>
                                         <div class="col-lg-6">
                                             <label>Contract ID</label>
-                                             <asp:TextBox ID="txtContractId" runat="server" CssClass="form-control" placeholder="Enter text" />
+                                            <asp:TextBox ID="txtContractId" runat="server" CssClass="form-control" placeholder="Enter text" />
                                             <p class="help-block">The Name of the Company</p>
                                         </div>
                                     </div>
@@ -101,7 +101,7 @@
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <label>Contract Type</label>
-                                             <asp:DropDownList ID="ddContractTypes" runat="server" CssClass="form-control">
+                                            <asp:DropDownList ID="ddContractTypes" runat="server" CssClass="form-control">
                                                 <asp:ListItem>False</asp:ListItem>
                                                 <asp:ListItem>True</asp:ListItem>
                                             </asp:DropDownList>
@@ -109,7 +109,7 @@
                                         </div>
                                         <div class="col-lg-6">
                                             <label>Contract Category</label>
-                                             <asp:DropDownList ID="ddContractCategories" runat="server" CssClass="form-control">
+                                            <asp:DropDownList ID="ddContractCategories" runat="server" CssClass="form-control">
                                                 <asp:ListItem>False</asp:ListItem>
                                                 <asp:ListItem>True</asp:ListItem>
                                             </asp:DropDownList>
@@ -118,7 +118,7 @@
                                     </div>
                                 </div>
 
-                                
+
                                 <div class="panel-footer">
                                     <div class="text-center">
                                         <asp:Button ID="btnSubmit" runat="server" Text="Save" Width="200px" CssClass="btn btn-success btn-lg" OnClick="btnSubmit_Click" />
@@ -135,13 +135,9 @@
             </div>
         </div>
 
-         <ajaxToolkit:ToolkitScriptManager ID="ScriptManager1" runat="Server" EnableScriptGlobalization="true"
-                    EnableScriptLocalization="true">
-                </ajaxToolkit:ToolkitScriptManager>
-                <br />
-                <ajaxToolkit:CalendarExtender ID="CalendarExtender1" runat="server" CssClass="cal_Theme1"
-                    Format="yyyy-MM-dd" PopupPosition="BottomRight" TargetControlID="txtStartDate">
-                </ajaxToolkit:CalendarExtender>
+        <ajaxToolkit:CalendarExtender ID="CalendarExtender1" runat="server" CssClass="cal_Theme1"
+            Format="yyyy-MM-dd" PopupPosition="BottomRight" TargetControlID="txtStartDate">
+        </ajaxToolkit:CalendarExtender>
     </asp:View>
 
     <%------------------------------------------------------------ Confirm View ------------------------------- --%>

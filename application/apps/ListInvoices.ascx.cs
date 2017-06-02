@@ -41,10 +41,12 @@ public partial class ListInvoices : System.Web.UI.UserControl
         }
     }
 
+    
     private void LoadData()
     {
         bll.LoadCompaniesIntoDropDown(user, ddCompanies);
-        SearchDb();
+        bll.LoadInvoiceCatgoriesIntoDropDown(ddCompanies.SelectedValue, user, ddinvoiceCategory);
+        //SearchDb();
     }
 
     protected void dataGridResults_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -115,14 +117,18 @@ public partial class ListInvoices : System.Web.UI.UserControl
         string BankCode = ddCompanies.SelectedValue;
         string merchantCode = txtName.Text;
         string isPaid = ddIsUsed.SelectedValue;
+        string invoiceCategory = ddinvoiceCategory.SelectedValue;
         searchCriteria.Add(BankCode);
         searchCriteria.Add(merchantCode);
         searchCriteria.Add(isPaid);
+        searchCriteria.Add(invoiceCategory);
         return searchCriteria.ToArray();
     }
 
     public void SetSearchParametersForUnpaidInvoices()
     {
+        ddinvoiceCategory.SelectedValue = "CLIENT_INVOICE";
+        ddinvoiceCategory.Enabled = false;
         ddIsUsed.SelectedValue = "FALSE";
         ddIsUsed.Enabled = false;
     }

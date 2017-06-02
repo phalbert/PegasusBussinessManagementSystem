@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class SaveSaleItem : System.Web.UI.UserControl,ExternalMessageInterface
+public partial class SaveSaleItem : System.Web.UI.UserControl, ExternalMessageInterface
 {
     public event EventHandler SaveCompleted;
     Bussinesslogic bll = new Bussinesslogic();
@@ -117,7 +117,7 @@ public partial class SaveSaleItem : System.Web.UI.UserControl,ExternalMessageInt
         client.ModifiedBy = user.UserId;
         return client;
     }
-    
+
 
     protected void btnConfirm_Click(object sender, EventArgs e)
     {
@@ -141,11 +141,20 @@ public partial class SaveSaleItem : System.Web.UI.UserControl,ExternalMessageInt
 
     public void LoadDataSpecificForSale(MyEventArgs eventArgs)
     {
-        string clientCode = eventArgs.PegPayId;
-        ddClients.SelectedValue = clientCode;
-        ddClients.Enabled = false;
-        txtSaleID.Text = SharedCommons.SharedCommons.GenerateUniqueId("SALE");
-        txtSaleID.Enabled = false;
+        try
+        {
+            string clientCode = eventArgs.PegPayId;
+            ddClients.SelectedValue = clientCode;
+            ddClients.Enabled = false;
+            txtSaleID.Text = SharedCommons.SharedCommons.GenerateUniqueId("SALE");
+            txtSaleID.Enabled = false;
+            ShowExternalMessage();
+        }
+        catch (Exception ex)
+        {
+            bll.LogError("SAVE-CLIENT", ex.StackTrace, "", ex.Message, "EXCEPTION");
+            bll.ShowMessage(lblmsg, ex.Message, true, Session);
+        }
     }
 
     public void ShowExternalMessage()

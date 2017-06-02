@@ -25,7 +25,7 @@ public class Bussinesslogic
         }
     }
 
-    public string GetVATValueElseZero(string CompanyCode, string TranAmount)
+    public string GetVATValueElseZero(string CompanyCode, string TranAmount, Label lblVAT)
     {
 
         try
@@ -45,6 +45,10 @@ public class Bussinesslogic
 
             vatSetting = result as SystemSetting;
             decimal vat = decimal.Parse(vatSetting.SettingValue);
+            if (lblVAT != null)
+            {
+                lblVAT.Text = vatSetting.SettingValue;
+            }
             decimal vatAmount = ((vat / 100) * (decimal.Parse(TranAmount)));
             return vatAmount.ToString();
         }
@@ -403,6 +407,21 @@ public class Bussinesslogic
         }
     }
 
+    public void LoadTranCatgoriesIntoDropDown(string CompanyCode, SystemUser user, DropDownList ddlst)
+    {
+        string[] parameters = { CompanyCode };
+        DataSet ds = client.ExecuteDataSet("GetTranCatgoriesForDropDown", parameters);
+        DataTable dt = ds.Tables[0];
+
+        ddlst.Items.Clear();
+        foreach (DataRow dr in dt.Rows)
+        {
+            string Text = dr["CategoryName"].ToString();
+            string Value = dr["CategoryCode"].ToString();
+            ddlst.Items.Add(new ListItem(Text, Value));
+        }
+    }
+
     public void LoadInvoiceCatgoriesIntoDropDown(string CompanyCode, SystemUser user, DropDownList ddlst)
     {
         string[] parameters = { CompanyCode };
@@ -566,6 +585,20 @@ public class Bussinesslogic
         company.StatusCode = Globals.SUCCESS_STATUS_CODE;
         company.StatusDesc = Globals.SUCCESS_STATUS_TEXT;
         return company;
+
+    }
+
+    public string GetSaleItemsForNarration(string SaleID)
+    {
+        Company company = new Company();
+        MSystemService mSystem = new MSystemService();
+        DataTable dt = mSystem.ExecuteDataSet("GetSaleItemsBySaleId", new string[] { SaleID }).Tables[0];
+        string result = "";
+        foreach (DataRow dr in dt.Rows)
+        {
+            result += dr["ItemDesc"].ToString() + " - " + dr["SubTotal"].ToString() + "\n";
+        }
+        return result;
 
     }
 
